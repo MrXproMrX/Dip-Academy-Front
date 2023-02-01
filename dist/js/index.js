@@ -200,6 +200,7 @@ if(checkboxNone){
   buttonDisabled.disabled = !checkboxNone.checked
   if( buttonDisabled.disabled){
     buttonDisabled.style.backgroundColor = '#880019c9'
+    buttonDisabled.style.color = '#fff'
   }
   
   checkboxNone.onclick = () => {
