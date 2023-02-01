@@ -192,3 +192,27 @@ buttons_6.forEach(function(button, index) {
 });
 
 // -------------------------------===========-------------------------------
+
+const checkboxNone = document.querySelector('.checkboxNone');
+const buttonDisabled = document.querySelector('.buttonDisabled');
+
+if(checkboxNone){
+  buttonDisabled.disabled = !checkboxNone.checked
+  if( buttonDisabled.disabled){
+    buttonDisabled.style.backgroundColor = '#880019c9'
+  }
+  
+  checkboxNone.onclick = () => {
+
+    if(checkboxNone.checked == true){
+      buttonDisabled.disabled = !checkboxNone.checked
+      buttonDisabled.style.backgroundColor = '#880019'
+    }
+
+    if(checkboxNone.checked == false){
+      buttonDisabled.disabled = !checkboxNone.checked
+      buttonDisabled.style.backgroundColor = '#880019c9'
+    }
+
+  }
+}

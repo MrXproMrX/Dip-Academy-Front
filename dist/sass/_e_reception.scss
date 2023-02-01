@@ -70,7 +70,67 @@
     &__title__h3{
         @include fontAll(1rem,500,$title);
         line-height: 135%;
+        padding-top: 2px;
     }
+}
+
+.input-wrap {
+    display: flex;
+    align-items:center;
+    position: relative;
+    padding-left: 40px;
+    margin-top: 15px;
+    cursor: pointer;
+  
+    /* Hide the browser's default radio button */
+
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+  
+    /* Create a custom radio button */
+    .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 30px;
+      width: 30px;
+      background-color: #ECECEC;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+    }
+    
+    /* When the radio button is checked, add a blue background */
+    input:checked ~ .checkmark {
+        &::after{
+            content: "";
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            background-color:$fon;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            -webkit-transform: translate(-50%,-50%);
+            -moz-transform: translate(-50%,-50%);
+            -ms-transform: translate(-50%,-50%);
+            -o-transform: translate(-50%,-50%);
+        }
+    }
+
 }
 
 // e_reception end
