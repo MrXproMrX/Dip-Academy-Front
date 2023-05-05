@@ -346,42 +346,8 @@ label {
 .programmes .about__title__h2::after {
   background-color: #FFFFFF;
 }
-.programmes__menu__link {
-  font-size: 1.375rem;
-  font-weight: 600;
+.programmes .academy_contint__text {
   color: #FFFFFF;
-  line-height: 135%;
-}
-.programmes__menu {
-  display: grid;
-  grid-template-columns: auto auto;
-  justify-content: space-between;
-  align-items: start;
-  margin-top: 20px;
-  grid-gap: 20px;
-}
-.programmes__menu li {
-  position: relative;
-  padding-left: 20px;
-}
-.programmes__menu li::after {
-  content: "";
-  width: 8px;
-  height: 8px;
-  background-color: rgba(255, 255, 255, 0.5);
-  position: absolute;
-  left: 0;
-  top: 50%;
-  border-radius: 50px;
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
-  -ms-border-radius: 50px;
-  -o-border-radius: 50px;
-  transform: translate(0, -50%);
-  -webkit-transform: translate(0, -50%);
-  -moz-transform: translate(0, -50%);
-  -ms-transform: translate(0, -50%);
-  -o-transform: translate(0, -50%);
 }
 
 .magistracy_in {
@@ -395,9 +361,6 @@ label {
   }
   .academy__menu__link {
     font-size: 1rem;
-  }
-  .programmes__menu__link {
-    font-size: 1.25rem;
   }
   .academy_contint__img {
     height: auto;
@@ -416,9 +379,6 @@ label {
   .programmes {
     padding: 30px 0;
   }
-  .programmes__menu__link {
-    font-size: 1.125rem;
-  }
   .academy_contint__text img,
 .academy_contint__text img:nth-child(even) {
     float: initial;
@@ -436,9 +396,6 @@ label {
   }
   .academy {
     padding: 40px 0;
-  }
-  .programmes__menu {
-    grid-template-columns: auto;
   }
 }
 .programmes_in {
@@ -3728,7 +3685,6 @@ h1, h2 {
 .academy__cart,
 .academy_contint__cart,
 .programmes__cart,
-.magistracy_in__cart,
 .programmes_in__cart,
 .programmes_in__cart,
 .news_in__cart,
@@ -3948,8 +3904,6 @@ h1, h2 {
 .academy_contint,
 .academy_contint__img,
 .programmes,
-.magistracy_in,
-.programmes_in,
 .programmes_in,
 .programmes_in__reviews__list,
 .programmes_in__video,
@@ -4116,7 +4070,6 @@ h1, h2 {
 .academy__cart,
 .academy_contint__cart,
 .programmes__cart,
-.magistracy_in__cart,
 .programmes_in__cart,
 .programmes_in__cart,
 .news_in__cart,
