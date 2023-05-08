@@ -68,7 +68,7 @@
   src: url("../fonts/EBGaramond-ExtraBold.ttf") format("truetype");
   font-weight: 800;
 }
-.footer__menu__link, .footer__icons__link span, .footer__icons__link, .news__pagination__link, .news__pagination__next, .all_programmes__link, .magistracy__link, .programmes_for__item, .programmes_for__img::after, .slider__link, .slider__list .slick-next, .slider__list .slick-prev, .slider__list li, .header__bottom__none__menu li, .header__bottom__links span, .header__bottom__links, .header__bottom__link, .e_reception__button, .vacancies__text, .vacancies__title__h3 span, .vacancies__title__h3, .videoGallery__img__video .button__min, .videoGallery__img__video::after, .fotogalereya_in__item2, .fotogalereya_in__list1 .slick-next, .fotogalereya_in__list1 .slick-prev, .photoGallery__img span, .photoGallery__img img, .photoGallery__item a, .photoGallery__item, .departmentsStaff_In__menu__link, .departmentsStaff_In__menu li::before, .departmentsStaff_In__menu li, .leadership__text__next, .leadership__button__open, .contacts__button, .programmes_in__reviews__link {
+.footer__menu__link, .footer__icons__link span, .footer__icons__link, .news__pagination__link, .news__pagination__next, .all_programmes__link, .magistracy__link, .programmes_for__item, .programmes_for__img::after, .slider__link, .slider__list .slick-next, .slider__list .slick-prev, .slider__list li, .header__bottom__none__menu li, .header__bottom__none, .header__bottom__links span, .header__bottom__links, .header__bottom__link, .e_reception__button, .vacancies__text, .vacancies__title__h3 span, .vacancies__title__h3, .videoGallery__img__video .button__min, .videoGallery__img__video::after, .fotogalereya_in__item2, .fotogalereya_in__list1 .slick-next, .fotogalereya_in__list1 .slick-prev, .photoGallery__img span, .photoGallery__img img, .photoGallery__item a, .photoGallery__item, .departmentsStaff_In__menu__link, .departmentsStaff_In__menu li::before, .departmentsStaff_In__menu li, .leadership__text__next, .leadership__button__open, .contacts__button, .programmes_in__reviews__link {
   transition: all 0.3s linear;
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
@@ -2424,6 +2424,11 @@ body {
   margin: 0 auto;
 }
 
+textarea, input[type=date i] {
+  font-family: "Montserrat", sans-serif !important;
+  box-sizing: border-box;
+}
+
 h1, h2 {
   font-family: "Cormorant", sans-serif;
   box-sizing: border-box;
@@ -2697,7 +2702,11 @@ h1, h2 {
   left: 0;
   align-items: flex-start;
   grid-gap: 60px;
-  display: none;
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4px);
+  transition: opacity 250ms ease 0s, visibility 250ms ease 0s, transform 250ms ease 0s;
 }
 .header__bottom__none__menu {
   display: flex;
@@ -2761,7 +2770,9 @@ h1, h2 {
 }
 
 .header__bottom__menu li:hover > .header__bottom__none {
-  display: flex;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0px);
 }
 
 .slider {
@@ -3827,14 +3838,18 @@ h1, h2 {
     width: 100%;
   }
   .header__bottom__none {
+    display: none;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
     flex-direction: column;
     position: relative;
-    grid-gap: 20px;
-    padding: 20px;
-    border: none;
   }
   .header__bottom__menu li + li .header__bottom__none {
-    padding: 20px;
+    padding: 20px 20px 0px 20px;
+  }
+  .header__bottom__none {
+    padding: 20px 20px 0px 20px;
   }
   .slider__title__h1 {
     font-size: 3.75rem;
@@ -4090,7 +4105,10 @@ h1, h2 {
     margin-right: 30px;
   }
   .header__bottom__none {
-    padding: 15px;
+    padding: 15px 15px 0px 15px;
+  }
+  .header__bottom__menu li + li .header__bottom__none {
+    padding: 15px 15px 0px 15px;
   }
   .slider__list .slick-next,
 .slider__list .slick-prev {
